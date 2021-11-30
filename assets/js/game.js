@@ -3,13 +3,16 @@ var playerHealth = 100;
 var playerAttack = 10;
 var playerMoney = 10;
 
-console.log(playerName, playerHealth, playerAttack);
+    //console.log(playerName, playerHealth, playerAttack);
 
-var enemyName = "Roborto";
+var enemyNames = ["Roborto", "Amy Andoroid", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
+    //console.log(enemyNames.length);
 
-var fight = function () {
+
+
+var fight = function (enemyName) {
     window.alert("Welcome to Robot Gradiator!");
     var promptFight = window.prompt ("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT or 'SKIP' to choose."); 
 
@@ -50,5 +53,11 @@ else {
         window.alert("You need to choose a valid option. Try Again!")
     }
 }
+for(var i=0; i<enemyNames.length; i++) {
 
-fight();
+    fight (enemyNames[i]);
+    // console.log(enemyNames[i]);
+    // console.log(i);
+    // console.log(enemyNames[i] + " is at " + i + " index");
+}
+
